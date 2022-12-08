@@ -69,7 +69,7 @@ public:
         while (video_capture.isOpened())
         {
             Mat frame;
-
+            frame_num++;
             bool isSuccess = video_capture.read(frame);
 
             if(!isSuccess) {
