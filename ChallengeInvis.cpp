@@ -92,7 +92,7 @@ public:
             t1.join();
             t2.join();
             output_video.write(modified_frame);
-            imwrite("frame.png", modified_frame);
+            // imwrite("frame.png", modified_frame);
 
 
         }

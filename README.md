@@ -40,14 +40,16 @@ with the outputs if you had more time to work on this?*
 
 ## Timing
 
-### Using Mutex
+### Writing to frame.png
 ```
-real	3m3.949s
-user	1m46.244s
-sys	0m7.568s
-```
-
-### No mutex
+real	2m4.934s
+user	1m34.170s
+sys	0m5.317s
 ```
 
+### No writing
+```
+real	0m42.073s
+user	1m20.079s
+sys	0m1.771s
 ```
