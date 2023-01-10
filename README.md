@@ -1,3 +1,9 @@
+## Docker issues
+* For a new container use `docker run -it -v "$(pwd)":/home/ubuntu/data --name invis ericdanz/nvidia_basic_build_env:latest`
+* If the above already exists use:
+  1. `docker restart invis`
+  2. `docker attach invis`
+
 ## Usage
 * In the docker env
 1. `cmake .` (Only need the very first time)
@@ -32,3 +38,16 @@ with the outputs if you had more time to work on this?*
     * In terms of doing something interesting with the output, in this situation it would be interesting to identify potential empty spots in the warehouse.
       * Using the edge detection and corner detection, we could identify which spots were regularly empty. This would allow warehouse owners to help identify empty space they could better utilize to store more products or identify which of their products were regularly sold.
 
+## Timing
+
+### Using Mutex
+```
+real	3m3.949s
+user	1m46.244s
+sys	0m7.568s
+```
+
+### No mutex
+```
+
+```

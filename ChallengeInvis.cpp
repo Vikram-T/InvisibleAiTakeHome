@@ -58,6 +58,7 @@ public:
         cout << "fourcc: " << cv::VideoWriter::fourcc('M','J','P','G') << endl;
         cout << "fps: " << video_capture.get(CAP_PROP_FPS) << endl;
         VideoWriter output_video;
+        //Four cc is the video codec
         output_video.open("output.avi", cv::VideoWriter::fourcc('M','J','P','G'), video_capture.get(CAP_PROP_FPS), Size(640, 360), true);
 
         if (!output_video.isOpened())
