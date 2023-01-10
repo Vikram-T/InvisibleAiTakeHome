@@ -9,7 +9,7 @@
  * To implement thread pooling we could create a vector of threads with a built in function that would continually dequeue jobs from a job queue. The jobs would contain the various image processing tasks
  * The threadpool could then use a mutex to access the latest task and let go of the mutex once it acquired a task.
  * All threads would repeat this process until we were done processing the video and there were no longer any tasks
- * In terms of thread priority there are three main scheduling policies
+ * In terms of thread priority there are two main scheduling policies
    * Round Robin: Round Robin is relatively simple and each task gets an equal time slice on the CPU and each task is executed in the order in which they are added to the kernel. This would be fine for a pipeline where each image processing task takes relatively the same amount of time and if the CPU and memory resources are limited.
    * The earliest deadline first pattern might be the most suitable for this type of task. Since each frame needs to come before the following frame all the image processing for a frame has to be done before the program can move on to the next frame. Hence the deadline is very important in this situation.
 * *Suggest a testing framework and steps if you were to deploy this code onto on-prem devices (from
